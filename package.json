@@ -10,17 +10,17 @@
     "Web",
     "Development"
   ],
-  "homepage": "https://github.com/pricefy-dotcom/webdev-client/tree/main#readme",
+  "homepage": "https://github.com/pricefy-dotcom/webdev-server/tree/main#readme",
   "bugs": {
-    "url": "https://github.com/pricefy-dotcom/webdev-client/issues"
+    "url": "https://github.com/pricefy-dotcom/webdev-server/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pricefy-dotcom/webdev-client.git#main"
+    "url": "git+https://github.com/pricefy-dotcom/webdev-server.git#main"
   },
   "license": "ISC",
   "author": "Tyler Price",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

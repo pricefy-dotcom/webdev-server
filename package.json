@@ -24,6 +24,7 @@
   "main": "index.ts",
   "scripts": {
     "start": "tsx index.ts",
+    "dev": "nodemon --exec tsx index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^22.20.5",
+    "nodemon": "^3.1.14",
     "typescript": "^5.9.3"
   }
 }

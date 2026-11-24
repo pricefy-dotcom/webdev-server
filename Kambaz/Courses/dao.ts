@@ -15,5 +15,13 @@ export default function CoursesDao(db) {
     db.courses = db.courses.filter((course) => course._id !== courseId);
     db.enrollments = db.enrollments.filter((e) => e.course !== courseId);
   };
-  return { findAllCourses, findCoursesForEnrolledUser, createCourse, deleteCourse };
+  const updateCourse = (courseId, courseUpdates) => {
+    const course = db.courses.find((course) => course._id === courseId);
+    Object.assign(course, courseUpdates);
+    return course;
+  };
+  return {
+    findAllCourses, findCoursesForEnrolledUser,
+    createCourse, deleteCourse, updateCourse,
+  };
 }

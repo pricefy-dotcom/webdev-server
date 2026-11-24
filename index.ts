@@ -8,6 +8,7 @@ import db from "./Kambaz/Database/index";
 import UserRoutes from "./Kambaz/Users/routes";
 import CourseRoutes from "./Kambaz/Courses/routes";
 import ModuleRoutes from "./Kambaz/Modules/routes";
+import AssignmentRoutes from "./Kambaz/Assignments/routes";
 
 const app = express();
 app.use(
@@ -34,6 +35,7 @@ app.use(express.json());
 UserRoutes(app, db);
 CourseRoutes(app, db);
 ModuleRoutes(app, db);
+AssignmentRoutes(app, db);
 Lab5(app);
 Hello(app);
 app.listen(process.env.PORT || 4000);

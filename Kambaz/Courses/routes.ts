@@ -30,8 +30,14 @@ export default function CourseRoutes(app, db) {
     enrollmentsDao.enrollUserInCourse(currentUser._id, newCourse._id);
     res.json(newCourse);
   };
+  const deleteCourse = (req, res) => {
+    const { courseId } = req.params;
+    dao.deleteCourse(courseId);
+    res.sendStatus(200);
+  };
 
   app.get("/api/courses", findAllCourses);
   app.get("/api/users/:userId/courses", findCoursesForEnrolledUser);
   app.post("/api/users/current/courses", createCourse);
+  app.delete("/api/courses/:courseId", deleteCourse);
 }

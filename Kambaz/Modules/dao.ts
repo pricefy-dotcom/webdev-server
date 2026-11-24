@@ -11,5 +11,10 @@ export default function ModulesDao(db) {
   const deleteModule = (moduleId) => {
     db.modules = db.modules.filter((module) => module._id !== moduleId);
   };
-  return { findModulesForCourse, createModule, deleteModule };
+  const updateModule = (moduleId, moduleUpdates) => {
+    const module = db.modules.find((module) => module._id === moduleId);
+    Object.assign(module, moduleUpdates);
+    return module;
+  };
+  return { findModulesForCourse, createModule, deleteModule, updateModule };
 }

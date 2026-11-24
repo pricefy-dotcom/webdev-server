@@ -8,5 +8,8 @@ export default function ModulesDao(db) {
     db.modules = [...db.modules, newModule];
     return newModule;
   };
-  return { findModulesForCourse, createModule };
+  const deleteModule = (moduleId) => {
+    db.modules = db.modules.filter((module) => module._id !== moduleId);
+  };
+  return { findModulesForCourse, createModule, deleteModule };
 }
